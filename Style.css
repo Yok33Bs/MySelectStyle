@@ -1,0 +1,44 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+body{
+    margin: 0px 500px;
+}
+
+.contains {
+    width: 40%;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.my-select {
+    width: 100%;
+}
+
+.my-select input {
+    width: 100%;
+    border-radius: 25px;
+
+}
+
+.option{
+    list-style: none;
+    color: black;
+}
+
+.options-container :hover {
+    background-color: #777;
+    color: rgb(255, 255, 241);
+}
+
+.options-container {
+    width: 100%;
+    border: 1px solid black;
+    display: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
