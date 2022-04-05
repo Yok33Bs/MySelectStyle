@@ -29,8 +29,6 @@ const showValue = () =>  {
             default : elem.style.display = "block" ;
          }
       }) ;
-   
-      selectedCheck();
       
 }
 
@@ -42,7 +40,7 @@ const selectedValue = element => {
    const elementInput = element.parentNode.previousSibling.previousElementSibling ;
    elementInput.value =  text.trim() ;
 
-
+   selectedCheck( element );
 }
 
 // Ocultar Select
@@ -51,23 +49,14 @@ const hiddenSelect = () => {
    forEach( elem => elem.style.display = "none" ) ;
 }
 
-//Cuando carga el DOM, se carga funci�n
+//Cuando carga el DOM, se carga función
 ( function (){
    document.onclick = detectedSelect ;
 }());
 
-const selectedCheck = () => {
+const selectedCheck = elementSelected => {
 
-   const iptElement = document.querySelector('.select').value;
    const option = document.querySelectorAll('.option');
-
-   option.forEach(e => {
-     
-       if( iptElement === e.innerHTML){
-         e.style.color = '#777'
-      };
-   
-   })
+   option.forEach( el => el.classList.remove("selected") ) ;
+   elementSelected.classList.add("selected");
 };
-
-   /*console.log('option', e);*/

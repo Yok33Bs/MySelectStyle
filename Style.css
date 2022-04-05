@@ -42,3 +42,7 @@ body{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.selected{
+    background: #59661b;
+    color: #fff ;
+}
